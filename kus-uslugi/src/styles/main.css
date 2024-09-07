@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Lato-normal";
+    src: url('/public/font/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+main {
+    font-family: "Lato-normal", sans-serif;
+}

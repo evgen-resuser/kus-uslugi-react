@@ -1,0 +1,22 @@
+
+@font-face {
+    font-family: "Lato";
+    src: url('/public/font/Lato-Bold.ttf') format('truetype');
+}
+
+
+.text-logo-container {
+    margin: 5px 0 5px;
+}
+
+.kus,.uslugi {
+    font-family: "Lato", sans-serif;
+}
+
+.kus {
+    color: #0065b1;
+}
+
+.uslugi {
+    color: #ee3f58;
+}
