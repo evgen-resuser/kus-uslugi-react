@@ -1,11 +1,11 @@
 import "/src/styles/header.css"
-import logo from "/logo.svg"
+import logo from "/logo-cat.svg"
 import PropTypes from "prop-types";
 import TextLogo from "./TextLogo.jsx";
 import {useEffect, useState} from "react";
-// import Switcher from "./Switcher.jsx";
+import ThemeSwitcher from "./ThemeSwitcher.jsx";
 
-export default function Header(props) {
+export default function Header({themeSetter}) {
 
     let [vis, setVis] = useState(false);
 
@@ -14,11 +14,7 @@ export default function Header(props) {
             const windowHeight = window.innerHeight;
             const scrollHeight = window.scrollY;
 
-            if (scrollHeight > windowHeight) {
-                setVis(true);
-            } else {
-                setVis(false);
-            }
+            scrollHeight > windowHeight ? setVis(true) : setVis(false);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -33,11 +29,12 @@ export default function Header(props) {
             <div className='title-div'>
                 <img src={logo} alt={'logo'} className='logo-img'/>
                 <TextLogo/>
+                <ThemeSwitcher/>
             </div>
-            {/*<Switcher />*/}
         </header>
     );
 }
 
 Header.propTypes = {
+    themeSetter: PropTypes.func,
 }

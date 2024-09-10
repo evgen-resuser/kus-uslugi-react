@@ -8,8 +8,10 @@
     height: 100vh;
     width: 100vw;
 
-    background: rgb(13,48,152);
+    background: rgb(31,80,232);
+    background: linear-gradient(126deg, rgb(34, 69, 243) 0%, rgb(78, 108, 227) 100%);
 
+    position: relative;
 
     display: flex;
     justify-content: center;
@@ -20,9 +22,6 @@
 .big-text-logo {
     font-size: 4vw;
     margin: 10px;
-    /*background-color: rgba(255, 255, 255, 0.56);*/
-    /*padding: 0 20px 0;*/
-    /*border-radius: 20px;*/
 }
 
 .greetings-container .text-logo-container .kus {
@@ -39,4 +38,16 @@
     text-align: center;
     width: 80%;
     color: white;
+}
+
+.big-logo-container {
+}
+
+.white-logo {
+    width: 20vw;
+    height: 20vw;
+}
+
+.circles {
+    position: absolute;
 }

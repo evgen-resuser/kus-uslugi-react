@@ -1,9 +1,20 @@
 @font-face {
     font-family: "Lato-normal";
-    src: url('/public/font/Lato-Regular.ttf') format('truetype');
+    src: url('/font/Lato-Regular.ttf') format('truetype');
     font-weight: normal;
 }
 
 main {
     font-family: "Lato-normal", sans-serif;
+    background-color: #fafcff;
+}
+
+.main-body {
+    margin: 2em 1em 2em;
+}
+
+.header2 {
+    color: #0b1f33;
+    font-size: 2em;
+    margin-bottom: 1em;
 }

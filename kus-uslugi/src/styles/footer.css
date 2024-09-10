@@ -1,0 +1,26 @@
+footer {
+    height: 3em;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #eff5f9;
+    font-family: "Lato", sans-serif;
+}
+
+.socials-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #66727f;
+}
+
+.social-button {
+    margin-right: 1em;
+    cursor: pointer;
+    color: #66727f;
+}
