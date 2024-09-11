@@ -1,0 +1,102 @@
+@media (min-width: 450px) {
+    .cat-card{
+        width: 50%;
+    }
+}
+
+@media (max-width: 450px) {
+    .cat-card{
+        width: 90%;
+    }
+}
+
+.cat-card {
+
+    height: 100%;
+
+    padding: 1em;
+    margin: 0.5em;
+
+    border-radius: 15px;
+    background: rgb(237,242,254);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 300;
+
+    transition: all 0.3s;
+
+}
+
+.cat-card:hover {
+    transform:scale(1.05);
+}
+
+.cat-card:nth-child(4n+1) {
+    background: linear-gradient(47deg, rgba(237,242,254,1) 0%, rgb(223, 252, 233) 100%);
+}
+
+.cat-card:nth-child(4n+2) {
+    background: linear-gradient(47deg, rgba(237,242,254,1) 0%, rgb(255, 228, 251) 100%);
+}
+
+.cat-card:nth-child(4n+3) {
+    background: linear-gradient(47deg, rgba(237,242,254,1) 0%, rgb(215, 210, 255) 100%);
+}
+
+.cat-card:nth-child(4n+4) {
+    background: linear-gradient(47deg, rgba(237,242,254,1) 0%, rgb(211, 246, 255) 100%);
+}
+
+.cat-name-job {
+    margin: 0 10% 0 5%;
+    display: flex;
+    flex-direction: column;
+
+    grid-area: name;
+}
+
+.cat-name {
+
+    font-size: 1.5em;
+    margin: 5px 10px 5px 0;
+
+}
+
+.cat-job {
+
+    color: darkgray;
+
+    grid-area: job;
+}
+
+.img-container {
+    height: 15em;
+    width: 15em;
+
+    overflow: hidden;
+    grid-area: img;
+}
+
+.cat-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.cat-card-clicked {
+    background-color: #0065b1;
+    z-index: 400;
+
+    position: absolute;
+    bottom: 1em;
+
+    width: 80vw;
+
+    display: grid;
+    grid-template-areas: "name img img" "name img img" "desc desc desc";
+}

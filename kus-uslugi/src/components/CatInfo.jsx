@@ -1,33 +1,26 @@
 import PropTypes from "prop-types";
 import "/src/styles/cat_info.css"
-import {isClass} from "eslint-plugin-react/lib/util/ast.js";
 
-export default function CatInfo({name, job, img, desc, isClicked, onClick, id}) {
+export default function CatInfo({cat, closeTab}) {
 
     return (
-        <>
-            <article className={"cat-card"}
-                     onClick={() => onClick(id)}
-            >
-                <div className={"cat-name-job"}>
-                    <span className={"cat-name"}>{name} {isClicked ? "v" : "x"}</span>
-                    <span className={"cat-job"}>{job}</span>
+        <article className={"cat-info".concat(cat ? "" : " hidden")}>
+            <div className={"cat-info-container"}>
+                <button className={"cat-info-close-button"} onClick={closeTab}>×</button>
+                <div className={"cat-info-header"}>
+                    <h3 className={"cat-info-name"}>{cat?.name}</h3>
+                    <h4 className={"cat-info-job"}>{cat?.job}</h4>
                 </div>
-                <div className={"img-container"}>
-                    <img src={img} alt={"pic"}/>
+                <div className={"cat-info-img-container"}>
+                    <img src={cat?.img} alt={"cat-img"}/>
                 </div>
-            </article>
-        </>
-
+                <p className={"cat-info-desc"}>{cat?.desc}</p>
+            </div>
+        </article>
     );
 }
 
 CatInfo.propTypes = {
-    name: PropTypes.string,
-    job: PropTypes.string,
-    img: PropTypes.string,
-    desc: PropTypes.string,
-    isClicked: PropTypes.bool,
-    onClick: PropTypes.func,
-    id: PropTypes.number,
+    cat: PropTypes.object,
+    closeTab: PropTypes.func,
 }

@@ -1,104 +1,94 @@
-@media (min-width: 450px) {
-    .cat-card{
-        width: 50%;
-    }
+.cat-info {
+
+    position: absolute;
+    z-index: 400;
+    width: 80%;
+    max-width: 700px;
+    height: 75%;
+
+    padding: 5vw;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: #d0dbff 1px solid;
+    box-shadow: 2px 2px 4px #cad5ff;
+
+    transition: all ease-in-out 500ms;
 }
 
-@media (max-width: 450px) {
-    .cat-card{
-        width: 90%;
-    }
-}
+.cat-info-container {
 
-.cat-card {
-
-    height: 100%;
-
-    padding: 1em;
-    margin: 0.5em;
-
-    border-radius: 15px;
-    background: rgb(237,242,254);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-    transition: all 0.3s;
-
-}
-
-.cat-card:hover {
-    transform:scale(1.05);
-}
-
-.cat-card:nth-child(4n+1) {
-    background: linear-gradient(47deg, rgba(237,242,254,1) 0%, rgb(223, 252, 233) 100%);
-}
-
-.cat-card:nth-child(4n+2) {
-    background: linear-gradient(47deg, rgba(237,242,254,1) 0%, rgb(255, 228, 251) 100%);
-}
-
-.cat-card:nth-child(4n+3) {
-    background: linear-gradient(47deg, rgba(237,242,254,1) 0%, rgb(215, 210, 255) 100%);
-}
-
-.cat-card:nth-child(4n+4) {
-    background: linear-gradient(47deg, rgba(237,242,254,1) 0%, rgb(211, 246, 255) 100%);
-}
-
-.cat-name-job {
-    margin: 0 10% 0 5%;
-    display: flex;
-    flex-direction: column;
-
-    grid-area: name;
-}
-
-.cat-name {
-
-    font-size: 1.5em;
-    margin: 5px 10px 5px 0;
-
-}
-
-.cat-job {
-
-    color: darkgray;
-
-    grid-area: job;
-}
-
-.img-container {
-    height: 15em;
-    width: 15em;
+    display: grid;
+    grid-template-areas: "name-job img" "desc img";
+    grid-template-columns: 1fr 1fr;
 
     overflow: hidden;
-    grid-area: img;
+    width: 100%;
+    height: 100%;
+
 }
 
-.cat-card img {
+.cat-info.hidden {
+    transform: translateX(-100vw) scale(0.5);
+    pointer-events: none;
+
+    transition: all ease 500ms;
+}
+
+.cat-info-close-button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+
+    border-radius: 15px;
+    background-color: #e4ecfd;
+    border: none;
+    color: #0f4ed3;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+
+    font-size: 1.5em;
+
+    transition: all ease 300ms;
+}
+
+.cat-info-close-button:hover {
+    transform: scale(1.1);
+    background-color: #ffcdd6;
+    color: #ee3f58;
+}
+
+.cat-info-header {
+    grid-area: name-job;
+}
+
+.cat-info-name {
+
+    font-size: 2em;
+    margin: 0;
+}
+
+.cat-info-job {
+    font-size: 1em;
+    margin: 0;
+}
+
+.cat-info-img-container {
+    grid-area: img;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cat-info-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-
-.cat-card-clicked {
-    background-color: #0065b1;
-    z-index: 400;
-
-    position: absolute;
-    bottom: 1em;
-
-    width: 80vw;
-
-    display: grid;
-    grid-template-areas: "name img img" "name img img" "desc desc desc";
-}
-
-.cat-card.cat-clicked .cat-name-job {
-
+.cat-info-desc {
+    grid-area: desc;
 }

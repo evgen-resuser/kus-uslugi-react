@@ -1,17 +1,23 @@
 import "/src/styles/main.css"
 import Greetings from "./Greetings.jsx";
 import CatsList from "./CatList.jsx";
-import {useContext} from "react";
-import {ThemeContext} from "../Context.js";
+import Commentary from "./Commentary.jsx";
+import VideoBlock from "./VideoBlock.jsx";
+
+import {cats} from "/test_data.js"
+import JumpToStart from "./JumpToStart.jsx";
 
 export default function Main() {
     return (
         <main>
             <Greetings/>
-            <p>Current theme: {useContext(ThemeContext)}</p>
             <div className={"main-body"}>
+                <VideoBlock/>
                 <h2 className={"header2"}>Познакомьтесь с нашими клиентами!</h2>
                 <CatsList/>
+                <Commentary/>
+                <Commentary/>
+                <JumpToStart/>
             </div>
         </main>
     );

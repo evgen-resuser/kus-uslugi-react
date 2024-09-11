@@ -1,6 +1,7 @@
 import "/src/styles/cat_list.css"
 import {cats} from "/test_data.js"
 import CatInfo from "./CatInfo.jsx";
+import CatCard from "./CatCard.jsx";
 import {useState} from "react";
 
 
@@ -8,22 +9,20 @@ export default function CatsList() {
 
     const [clicked, setClicked] = useState(null);
 
-    function click(id) {
-        console.log(id + " clicked")
-        setClicked(id);
-    }
-
-    const catsList = cats.map((cat) => (
-        <CatInfo name={cat.name}
+    const catsList = cats.map((cat, index) => (
+        <CatCard name={cat.name}
                  job={cat.job}
                  desc={cat.desc}
                  img={cat.img}
                  key={cat.id}
                  id={cat.id}
-                 onClick={click}
-                 isClicked={clicked === cat.id}
+                 onClick={() => click(index)}
         />)
     );
+
+    function click(id) {
+        setClicked(cats[id]);
+    }
 
     function slideRight() {
         let slider = document.getElementById("cat-slider");
@@ -54,7 +53,7 @@ export default function CatsList() {
             <ul id={"cat-slider"} className={"cats-ul"}>{catsList}</ul>
             <button className={"control-button"} onClick={slideRight}>⏵
             </button>
-
+            <CatInfo cat={clicked} closeTab={() => setClicked(null)}/>
         </div>
     );
 }
