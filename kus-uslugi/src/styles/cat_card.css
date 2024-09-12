@@ -8,6 +8,7 @@
     .cat-card{
         width: 90%;
     }
+
 }
 
 .cat-card {
@@ -22,7 +23,6 @@
 
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
 
     z-index: 300;
@@ -37,18 +37,36 @@
 
 .cat-card:nth-child(4n+1) {
     background: linear-gradient(47deg, rgba(237,242,254,1) 0%, rgb(223, 252, 233) 100%);
+
+    .cat-job {
+        color: #007022;
+    }
 }
 
 .cat-card:nth-child(4n+2) {
     background: linear-gradient(47deg, rgba(237,242,254,1) 0%, rgb(255, 228, 251) 100%);
+
+    .cat-job {
+        color: #860071;
+    }
 }
 
 .cat-card:nth-child(4n+3) {
     background: linear-gradient(47deg, rgba(237,242,254,1) 0%, rgb(215, 210, 255) 100%);
+
+    .cat-job {
+        color: #0e0073;
+    }
+
 }
 
 .cat-card:nth-child(4n+4) {
     background: linear-gradient(47deg, rgba(237,242,254,1) 0%, rgb(211, 246, 255) 100%);
+
+    .cat-job {
+        color: #005269;
+    }
+
 }
 
 .cat-name-job {
@@ -62,23 +80,24 @@
 .cat-name {
 
     font-size: 1.5em;
-    margin: 5px 10px 5px 0;
+    margin: 5px 10px 0 0;
 
 }
 
 .cat-job {
-
-    color: darkgray;
-
     grid-area: job;
+    margin-bottom: 5px;
 }
 
 .img-container {
-    height: 15em;
-    width: 15em;
+    height: 20em;
+    width: 15vw;
+    min-width: 250px;
 
     overflow: hidden;
     grid-area: img;
+
+    border-radius: 10px;
 }
 
 .cat-card img {

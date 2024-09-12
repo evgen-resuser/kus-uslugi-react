@@ -29,7 +29,7 @@
     opacity: 1;
 
     width: 3em;
-    height: 50vh;
+    height: 35em;
 
     transition: transform 0.2s;
 }
@@ -37,6 +37,10 @@
 .control-button:hover {
     background-color: #d7e9ff;
     transform: scale(1.05);
+}
+
+.control-button:active {
+    transform: scale(1);
 }
 
 .control-button.hidden {

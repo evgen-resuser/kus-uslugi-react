@@ -3,8 +3,6 @@ import Greetings from "./Greetings.jsx";
 import CatsList from "./CatList.jsx";
 import Commentary from "./Commentary.jsx";
 import VideoBlock from "./VideoBlock.jsx";
-
-import {cats} from "/test_data.js"
 import JumpToStart from "./JumpToStart.jsx";
 
 export default function Main() {

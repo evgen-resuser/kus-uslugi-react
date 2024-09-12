@@ -5,7 +5,6 @@ import Main from "./components/Main.jsx";
 import Footer from "./components/Footer.jsx";
 import {ThemeContext} from "./Context.js";
 import {useState} from "react";
-import Commentary from "./components/Commentary.jsx";
 
 function App() {
     const [theme, setTheme] = useState("light");

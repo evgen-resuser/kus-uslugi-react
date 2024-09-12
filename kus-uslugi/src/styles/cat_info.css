@@ -13,7 +13,7 @@
     border: #d0dbff 1px solid;
     box-shadow: 2px 2px 4px #cad5ff;
 
-    transition: all ease-in-out 500ms;
+    transition: all ease-in-out 400ms;
 }
 
 .cat-info-container {
@@ -29,16 +29,17 @@
 }
 
 .cat-info.hidden {
-    transform: translateX(-100vw) scale(0.5);
+    transform:  scale(0.5);
+    opacity: 0;
     pointer-events: none;
 
-    transition: all ease 500ms;
+    transition: all ease 400ms;
 }
 
 .cat-info-close-button {
     position: absolute;
-    top: 1em;
-    right: 1em;
+    top: 0.5em;
+    right: 0.5em;
 
     border-radius: 15px;
     background-color: #e4ecfd;
@@ -50,7 +51,7 @@
 
     font-size: 1.5em;
 
-    transition: all ease 300ms;
+    transition: all ease 200ms;
 }
 
 .cat-info-close-button:hover {
@@ -71,6 +72,7 @@
 
 .cat-info-job {
     font-size: 1em;
+    color: #0065b1;
     margin: 0;
 }
 
@@ -80,7 +82,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
+    border-radius: 10px;
+
+    height: 100%;
 }
 
 .cat-info-img-container img {
@@ -91,4 +97,25 @@
 
 .cat-info-desc {
     grid-area: desc;
+    margin: 10px 20px 10px 0;
+    overflow: auto;
 }
+
+@media (max-width: 450px) {
+    .cat-info-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cat-info {
+        width: 90%;
+        height: 90%;
+    }
+
+    .cat-info-img-container {
+        height: 60%;
+        width: 70%;
+    }
+
+}
+
