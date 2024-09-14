@@ -13,10 +13,15 @@
 }
 
 .cats-ul {
-    overflow: hidden;
+    overflow: auto;
     display: flex;
     padding: 1em 0 1em;
     height: 50%;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
 

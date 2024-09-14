@@ -1,4 +1,4 @@
 import {createContext} from "react";
 
-export const LanguageContext = createContext("ru");
-export const ThemeContext = createContext("light");
+export const Context = createContext(null);
+export const ContextSetter = createContext(null);

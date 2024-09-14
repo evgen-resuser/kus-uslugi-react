@@ -18,6 +18,8 @@
     padding: 1em;
     margin: 0.5em;
 
+    min-width: 250px;
+
     border-radius: 15px;
     background: rgb(237,242,254);
 
@@ -28,6 +30,8 @@
     z-index: 300;
 
     transition: all 0.3s;
+
+    scroll-snap-align: center;
 
 }
 
@@ -91,8 +95,8 @@
 
 .img-container {
     height: 20em;
-    width: 15vw;
-    min-width: 250px;
+    width: 100%;
+    max-width: 250px;
 
     overflow: hidden;
     grid-area: img;
@@ -118,4 +122,5 @@
 
     display: grid;
     grid-template-areas: "name img img" "name img img" "desc desc desc";
+
 }

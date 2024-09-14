@@ -4,8 +4,12 @@ import CatsList from "./CatList.jsx";
 import Commentary from "./Commentary.jsx";
 import VideoBlock from "./VideoBlock.jsx";
 import JumpToStart from "./JumpToStart.jsx";
+import {useContext} from "react";
+import {Context} from "../Context.js";
 
 export default function Main() {
+    const cats = useContext(Context).catsFile;
+
     return (
         <main>
             <Greetings/>
@@ -13,8 +17,9 @@ export default function Main() {
                 <VideoBlock/>
                 <h2 className={"header2"}>Познакомьтесь с нашими клиентами!</h2>
                 <CatsList/>
-                <Commentary/>
-                <Commentary/>
+                <h2 className={"header2"}>А что говорят наши кисики?</h2>
+                <Commentary cat={cats[0]} />
+                <Commentary cat={cats[1]} />
                 <JumpToStart/>
             </div>
         </main>

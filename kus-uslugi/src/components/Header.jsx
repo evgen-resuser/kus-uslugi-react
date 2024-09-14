@@ -3,11 +3,10 @@ import logo from "/logo-cat.svg"
 import PropTypes from "prop-types";
 import TextLogo from "./TextLogo.jsx";
 import {useEffect, useState} from "react";
-import ThemeSwitcher from "./ThemeSwitcher.jsx";
 
-export default function Header({themeSetter}) {
+export default function Header() {
 
-    let [vis, setVis] = useState(false);
+    const [vis, setVis] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,6 +14,7 @@ export default function Header({themeSetter}) {
             const scrollHeight = window.scrollY;
 
             scrollHeight > windowHeight ? setVis(true) : setVis(false);
+
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -25,11 +25,10 @@ export default function Header({themeSetter}) {
     }, []);
 
     return (
-        <header className={vis ? "header" : "header-hidden"}>
+        <header className={(vis ? "header" : "header-hidden")}>
             <div className='title-div'>
                 <img src={logo} alt={'logo'} className='logo-img'/>
                 <TextLogo/>
-                <ThemeSwitcher/>
             </div>
         </header>
     );

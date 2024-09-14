@@ -1,16 +1,18 @@
 import PropTypes from "prop-types";
 
-export default function Commentary({header, content, img}) {
+import "/src/styles/commentary.css"
+
+export default function Commentary({cat}) {
+
     return (
-        <div>
-            <h2>{header}</h2>
-            <p>{content}</p>
+        <div className={"commentary-card"}>
+            <h2 className={"commentary-name"}>{cat.name}</h2>
+            <img src={cat.img} alt={"cat-pic"} className={"commentary-img"}/>
+            <blockquote className={"commentary-comm"}>{cat?.commentary}</blockquote>
         </div>
     );
 }
 
-Commentary.PropTypes = {
-    header: PropTypes.string,
-    content: PropTypes.string,
-    img: PropTypes.any,
+Commentary.propTypes = {
+    cat: PropTypes.object,
 }

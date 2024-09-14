@@ -16,5 +16,6 @@ main {
 .header2 {
     color: #0b1f33;
     font-size: 2em;
-    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-top: 1em;;
 }

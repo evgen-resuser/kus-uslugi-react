@@ -1,0 +1,81 @@
+.commentary-card {
+    margin: auto auto 1em;
+    padding: 1.5em;
+
+    width: 80vw;
+    max-width: 800px;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: #d0dbff 1px solid;
+    box-shadow: 2px 2px 4px #cad5ff;
+
+    display: grid;
+}
+
+@media (max-width: 520px) {
+    .commentary-card {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "img name" "comm comm";
+    }
+}
+
+@media (min-width: 520px) {
+    .commentary-card:nth-child(odd) {
+        grid-template-columns: 2fr 3fr;
+        grid-template-areas: "img comm" "name comm";
+    }
+
+    .commentary-card:nth-child(even) {
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas: "comm img" "comm name";
+    }
+}
+
+.commentary-name{
+    grid-area: name;
+    justify-self: center;
+    align-self: center;
+}
+
+.commentary-comm {
+    grid-area: comm;
+
+    max-height: 40vh;
+    overflow: auto;
+
+    justify-self: center;
+    align-self: center;
+
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.commentary-comm:before, .commentary-comm:after {
+    position: relative;
+    display: block;
+    color: #0065b1;
+    font-size: 1.5em;
+}
+
+.commentary-comm:before {
+    content: "\201C";
+    text-align: left;
+}
+
+.commentary-comm:after {
+    content: "\201D";
+    text-align: right;
+}
+
+.commentary-img {
+
+    justify-self: center;
+
+    border-radius: 50%;
+
+    grid-area: img;
+    width: 70%;
+    aspect-ratio: 1 / 1;
+}

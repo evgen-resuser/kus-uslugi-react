@@ -1,13 +1,18 @@
 import "/src/styles/cat_list.css"
-import {cats} from "/test_data.js"
+
 import CatInfo from "./CatInfo.jsx";
 import CatCard from "./CatCard.jsx";
-import {useState} from "react";
+import {useContext, useRef, useState} from "react";
+import {Context} from "../Context.js";
 
 
 export default function CatsList() {
 
     const [clicked, setClicked] = useState(null);
+
+    const cats = useContext(Context).catsFile;
+
+    const listRef = useRef(null);
 
     const catsList = cats.map((cat, index) => (
         <CatCard name={cat.name}
@@ -25,20 +30,26 @@ export default function CatsList() {
     }
 
     function slideRight() {
-        let slider = document.getElementById("cat-slider");
-        let card = slider.firstChild.offsetWidth;
-        let width = slider.offsetWidth;
+
+        let slider = listRef.current;
+        let width = slider.scrollWidth;
+        let card = width / slider.children.length;
+
         if (slider.scrollLeft < width) {
             slider.scrollLeft += card;
         } else {
-            slider.scrollLeft = width - card;
+            slider.scrollLeft = width;
         }
+
     }
 
     function slideLeft() {
-        let slider = document.getElementById("cat-slider");
-        let card = slider.firstChild.offsetWidth;
-        if (slider.scrollLeft <= card) {
+
+        let slider = listRef.current;
+        let width = slider.scrollWidth;
+        let card = width / slider.children.length;
+
+        if (slider.scrollLeft >= card) {
             slider.scrollLeft -= card;
         } else {
             slider.scrollLeft = 0;
@@ -50,7 +61,7 @@ export default function CatsList() {
 
             <button className={"control-button"} onClick={slideLeft}>⏴
             </button>
-            <ul id={"cat-slider"} className={"cats-ul"}>{catsList}</ul>
+            <ul id={"cat-slider"} className={"cats-ul"} ref={listRef}>{catsList}</ul>
             <button className={"control-button"} onClick={slideRight}>⏵
             </button>
             <CatInfo cat={clicked} closeTab={() => setClicked(null)}/>
