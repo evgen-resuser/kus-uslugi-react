@@ -1,0 +1,34 @@
+.video-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 90vw;
+    max-width: 800px;
+
+    margin: 0 auto 0;
+}
+
+@media (max-width: 520px) {
+    .video-block {
+        flex-direction: column;
+    }
+
+    .video-article {
+        margin: 1em 1em 0;
+    }
+}
+
+.player {
+    height: 30vh;
+    border-radius: 15px;
+}
+
+.video-article {
+    margin: 1em;
+    padding: 0.5em;
+    align-self: center;
+    text-align: center;
+    font-size: 1.5em;
+    color: #0065b1;
+}

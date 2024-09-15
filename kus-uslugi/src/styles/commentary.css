@@ -36,6 +36,8 @@
     grid-area: name;
     justify-self: center;
     align-self: center;
+
+    color: #0065b1;
 }
 
 .commentary-comm {

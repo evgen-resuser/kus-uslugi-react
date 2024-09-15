@@ -8,8 +8,8 @@
     height: 100vh;
     width: 100vw;
 
-    background: rgb(31,80,232);
-    background: linear-gradient(126deg, rgb(34, 69, 243) 0%, rgb(78, 108, 227) 100%);
+    background: rgb(131,58,180);
+    background: linear-gradient(121deg, rgba(131,58,180,1) 0%, rgba(3,37,208,1) 60%, rgba(0,150,196,1) 100%);
 
     position: relative;
 
@@ -24,12 +24,8 @@
     margin: 10px;
 }
 
-.greetings-container .text-logo-container .kus {
-    color: #d6eaff;
-}
-
-.greetings-container .text-logo-container .uslugi {
-    color: #ffc7d0;
+.big-logo-container {
+    z-index: 400;
 }
 
 .quote {
@@ -38,16 +34,132 @@
     text-align: center;
     width: 80%;
     color: white;
-}
 
-.big-logo-container {
+    z-index: 400;
 }
 
 .white-logo {
     width: 20vw;
     height: 20vw;
+
+    z-index: 400;
 }
+
+
 
 .circles {
     position: absolute;
+}
+
+.particles-container {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 100;
+
+    overflow: hidden;
+}
+
+.particle {
+    list-style: none;
+    z-index: 100;
+
+    position: absolute;
+
+    animation-name: circle-move;
+
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+
+    aspect-ratio: 1 / 1;
+}
+
+.particle:nth-child(1) {
+    height: 350px;
+
+
+    background: rgba(252, 70, 107, 0.25);
+    background: radial-gradient(circle, rgba(252, 70, 107, 0.25) 0%, rgba(252, 70, 107, 0.25) 40%, rgba(80,92,238,0) 60%, rgba(63,94,251,0) 100%);
+
+    border-radius: 50%;
+
+    left: 10vw;
+    bottom: 0;
+
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(2) {
+    height: 500px;
+
+
+    background: rgba(196, 123, 255, 0.3);
+    background: radial-gradient(circle, rgba(196, 123, 255, 0.3) 0%, rgba(196, 123, 255, 0.3) 40%, rgba(80,92,238,0) 60%, rgba(63,94,251,0) 100%);
+
+    border-radius: 50%;
+
+    top: 0;
+    left: 30vw;
+
+    animation-duration: 6s;
+    animation-delay: 2s;
+
+}
+
+.particle:nth-child(3) {
+    height: 600px;
+
+
+    background: rgba(136, 215, 253, 0.25);
+    background: radial-gradient(circle, rgba(136, 215, 253, 0.25) 0%, rgba(136, 215, 253, 0.25) 40%, rgba(80,92,238,0) 60%, rgba(63,94,251,0) 100%);
+
+    border-radius: 50%;
+
+
+    right: -20%;
+    top: -20%;
+
+    animation-duration: 9s;
+
+}
+
+.particle:nth-child(4) {
+    height: 200px;
+
+
+    background: rgba(53, 225, 255, 0.3);
+    background: radial-gradient(circle, rgba(53, 225, 255, 0.3) 0%, rgba(53, 225, 255, 0.3) 40%, rgba(80,92,238,0) 60%, rgba(63,94,251,0) 100%);
+
+    border-radius: 50%;
+
+
+    top: 10vh;
+    left: 10vw;
+
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+@keyframes circle-move {
+
+    0% {
+        transform: translate(-100%, -100%);
+        scale: 0.8;
+        opacity: 0.2;
+    }
+
+    50% {
+        scale: 1;
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(100%, 200%);
+        scale: 0.8;
+        opacity: 0.1;
+    }
+
 }
