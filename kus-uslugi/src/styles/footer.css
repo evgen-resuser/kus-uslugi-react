@@ -1,5 +1,5 @@
 footer {
-    height: 3em;
+    height: 5em;
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: #eff5f9;
@@ -8,19 +8,64 @@ footer {
 
 .socials-block {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
+    padding-right: 3em;
 }
 
 .name-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #66727f;
+    font-size: 1.2em;
 }
 
 .social-button {
     margin-right: 1em;
     cursor: pointer;
     color: #66727f;
+}
+
+.a-icon {
+    aspect-ratio: 1/1;
+    height: 2em;
+    margin: auto auto -5px;
+}
+
+.social-button {
+    border-radius: 50%;
+    background-color: #dfebf6;
+
+    aspect-ratio: 1/1;
+    width: 3.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 300ms ease scale;
+}
+
+.social-button:hover {
+    scale: 1.05;
+    transition: 300ms ease scale;
+}
+
+.copyright {
+    font-size: 0.8em;
+    color: #66727f;
+}
+
+.copyright > a {
+    color: #66727f;
+}
+
+.copyright > a:hover {
+    color: black;
+}
+
+.footer-text-block {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 3em;
 }

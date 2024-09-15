@@ -53,6 +53,7 @@
 
 .particles-container {
     position: absolute;
+    padding: 0;
 
     width: 100%;
     height: 100%;
@@ -113,8 +114,8 @@
     height: 600px;
 
 
-    background: rgba(136, 215, 253, 0.25);
-    background: radial-gradient(circle, rgba(136, 215, 253, 0.25) 0%, rgba(136, 215, 253, 0.25) 40%, rgba(80,92,238,0) 60%, rgba(63,94,251,0) 100%);
+    background: rgba(136, 253, 249, 0.25);
+    background: radial-gradient(circle, rgba(136, 253, 249, 0.25) 0%, rgba(136, 253, 249, 0.25) 40%, rgba(80,92,238,0) 60%, rgba(63,94,251,0) 100%);
 
     border-radius: 50%;
 
@@ -147,7 +148,7 @@
 
     0% {
         transform: translate(-100%, -100%);
-        scale: 0.8;
+        scale: 0.6;
         opacity: 0.2;
     }
 

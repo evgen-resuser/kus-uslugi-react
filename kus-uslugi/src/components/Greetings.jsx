@@ -4,8 +4,9 @@ import FormButton from "./FormButton.jsx";
 
 
 export default function Greetings() {
+
     return (
-        <div className={"greetings-container"}>
+        <div className={"greetings-container"} id={"page-start"}>
             <div className={"big-logo-container"}>
                 <img src={logo} alt={"logo"} className={"white-logo"}/>
             </div>
