@@ -45,12 +45,6 @@
     z-index: 400;
 }
 
-
-
-.circles {
-    position: absolute;
-}
-
 .particles-container {
     position: absolute;
     padding: 0;

@@ -69,3 +69,26 @@ footer {
     flex-direction: column;
     padding-left: 3em;
 }
+
+@media (max-width: 450px) {
+    .name-block {
+        font-size: 4vw;
+    }
+
+    .copyright {
+        font-size: 2vw;
+    }
+
+    .social-button {
+        aspect-ratio: 1/1;
+        width: 8vw;
+    }
+
+
+    .a-icon {
+        aspect-ratio: 1/1;
+        height: 6vw;
+        margin: auto auto -5px;
+    }
+
+}
