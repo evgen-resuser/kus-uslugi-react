@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <footer>
             <div className={"footer-text-block"}>
-                <div className={"name-block"}>Сыроежкин Евгений. 2024. </div>
+                <div className={"name-block"}>2024 Сыроежкин Евгений</div>
                 <span className={"copyright"}> Сайт является пародией на портал <a href={"https://gosuslugi.ru"}>Госуслуги</a></span>
             </div>
             <div className={"socials-block"}>
