@@ -1,9 +1,3 @@
-@media (max-width: 450px) {
-    .big-text-logo {
-        font-size: 4vw;
-    }
-}
-
 .greetings-container {
     height: 100vh;
     width: 100%;
@@ -39,8 +33,8 @@
 }
 
 .white-logo {
+    aspect-ratio: 1/1;
     width: 20vw;
-    height: 20vw;
 
     z-index: 400;
 }
@@ -156,5 +150,18 @@
         scale: 0.8;
         opacity: 0.1;
     }
+}
 
+@media (max-width: 450px) {
+    .big-text-logo {
+        font-size: 4vw;
+    }
+
+    .white-logo {
+        width: 70vw;
+    }
+
+    .quote {
+        font-size: 1.2em;
+    }
 }

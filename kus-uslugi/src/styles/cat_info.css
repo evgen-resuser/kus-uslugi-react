@@ -36,30 +36,6 @@
     transition: all ease 400ms;
 }
 
-.cat-info-close-button {
-    position: absolute;
-    top: 0.5em;
-    right: 0.5em;
-
-    border-radius: 15px;
-    background-color: #e4ecfd;
-    border: none;
-    color: #0f4ed3;
-    height: 40px;
-    width: 40px;
-    padding: 0;
-
-    font-size: 1.5em;
-
-    transition: all ease 200ms;
-}
-
-.cat-info-close-button:hover {
-    transform: scale(1.1);
-    background-color: #ffcdd6;
-    color: #ee3f58;
-}
-
 .cat-info-header {
     grid-area: name-job;
 }

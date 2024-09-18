@@ -14,7 +14,8 @@ function App() {
         "theme": "light",
         "lang": "ru",
         "catsFile": cats
-    })
+    });
+
 
     return (
         <>

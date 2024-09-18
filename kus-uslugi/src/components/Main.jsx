@@ -4,15 +4,22 @@ import CatsList from "./CatList.jsx";
 import Commentary from "./Commentary.jsx";
 import VideoBlock from "./VideoBlock.jsx";
 import JumpToStart from "./JumpToStart.jsx";
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import {Context} from "../Context.js";
+import Modal from "./Modal.jsx";
 
 export default function Main() {
     const cats = useContext(Context).catsFile;
 
+    const [isFormShown, setFormShown] = useState(false);
+    function handleFormClick() {
+        setFormShown(!isFormShown);
+    }
+
     return (
         <main>
-            <Greetings/>
+            <Modal isShown={!!isFormShown} showControl={handleFormClick}/>
+            <Greetings showForm={handleFormClick}/>
             <div className={"main-body"}>
                 <VideoBlock/>
                 <h2 className={"header2"}>Познакомьтесь с нашими клиентами!</h2>

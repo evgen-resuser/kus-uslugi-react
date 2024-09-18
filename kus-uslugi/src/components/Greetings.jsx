@@ -3,7 +3,7 @@ import logo from "/wl.svg"
 import FormButton from "./FormButton.jsx";
 
 
-export default function Greetings() {
+export default function Greetings({showForm}) {
 
     return (
         <div className={"greetings-container"} id={"page-start"}>
@@ -13,7 +13,7 @@ export default function Greetings() {
             <article className={"quote"}>Мы помогаем кисикам, которые не оправдываются наличием лапок, найти свое
                 призвание!
             </article>
-            <FormButton/>
+            <FormButton onClick={showForm}/>
 
             <ul className={"particles-container"}>
                 <li className={"particle"}></li>

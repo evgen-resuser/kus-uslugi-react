@@ -1,4 +1,11 @@
+@font-face {
+    font-family: "Lato-normal";
+    src: url('/public/font/Lato-Medium.ttf') format('truetype');
+    font-weight: normal;
+}
+
 body {
+    font-family: "Lato-normal", sans-serif;
     margin: 0;
     padding: 0;
 }
